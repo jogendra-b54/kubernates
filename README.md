@@ -36,3 +36,20 @@
 
        11) Pod Priority & Pre-emption     
  ```
+
+ ### Kubernetes commands    
+
+ Most used Kubernetes commands :
+
+ ```
+ * kubectl get nodes  
+* kubectl get nodes -o wide
+* kubectl cluster-info 
+* kubectl api-versions
+* kubectl api-resources 
+* kubectl --help 
+* kubectl describe resource resourceName
+* kubectl logs -f podName                   [ when you have a single container in pod ] 
+* kubectl logs -f podName -c containerName  [ when you have multiple containers in a pod ] 
+ 
+ ```
