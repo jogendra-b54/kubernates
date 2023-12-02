@@ -1,0 +1,20 @@
+#limits and requests define what is the minimum and maxmimum cpu , memory that can a pod can have
+
+# Requests Define the lower Cap or Minimum Resources that are needed to start a pod 
+# limits define the upper cap and maxmimum resources that can be used by the pod and if the pod reaches the maximum resources , then it is[kubelet] is going to restart the POD
+# metrics can be CPO , Memory or PageSize [you can also create your custom metrics to define them]
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+spec:
+  containers:
+  - name: app
+    image: nginx:latest
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
