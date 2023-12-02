@@ -27,3 +27,17 @@ spec:
       - configMapRef:
           name: ecomm-configmap  
 
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-with-cm
+spec:
+  containers: 
+  - name: ubuntu
+    image: ubuntu:latest
+    command: ["sleep" , "1000"]
+    envFrom:
+      - configMapRef:
+          name: ecomm-configmap  
