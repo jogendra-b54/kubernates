@@ -18,3 +18,21 @@ spec:
       limits:
         memory: "128Mi"
         cpu: "500m"
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend
+spec:
+  containers:
+  - name: app
+    image: nginx:latest
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "4"
+      limits:
+        memory: "128Mi"
+        cpu: "8"
