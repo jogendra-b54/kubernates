@@ -17,5 +17,22 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: php-redis
-        image: gcr.io/google_samples/gb-frontend:v3
+      - name: nginx
+        image: nginx:latest
+    ports:
+       containerPort: 80
+
+
+---
+#if dont mention the type of servoce  by deaf;t it iwll be a cluserIP service[which is accesible only int he cluser]
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-svc
+spec:
+  selector:
+    tier: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
