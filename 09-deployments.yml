@@ -9,7 +9,7 @@ spec:
   replicas: 10
   strategy:
     type: RollingUpdate
-    RollingUpdate:
+    rollingUpdate:
       maxSurge: 20
   selector:
     matchLabels:
