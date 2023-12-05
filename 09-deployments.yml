@@ -27,7 +27,7 @@ spec:
 
 
 ---
-
+# this creates  a external classic load balancer
 apiVersion: v1
 kind: Service
 metadata:
@@ -38,5 +38,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80          # port no that your service has to listern and this is the port you will access
-      targetPort: 8080  # Target port forwards the request to the backebd pod
+      targetPort: 80  # Target port forwards the request to the backebd pod
   type: LoadBalancer # This is going to create a load balancer [on your cloud and this is chargable on thetop of eEKS]
