@@ -6,7 +6,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 10
+  replicas: 3
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -37,5 +37,6 @@ spec:
     app: nginx
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 80          # port no that your service has to listern and this is the port you will access
+      targetPort: 8080  # Target port forwards the request to the backebd pod
+      type: LoadBalancer # This is going to create a load balancer [on your cloud and this is chargable on thetop of eEKS]
