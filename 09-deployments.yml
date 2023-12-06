@@ -79,4 +79,4 @@ spec:
             name: frontend-svc
             port:
               number: 80
-    ingressClassName: nginx
+     ingressClassName: nginx
