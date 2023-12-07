@@ -9,7 +9,5 @@
 
 
 FROM        centos:7
-RUN         useradd roboshop
-USER        roboshop
 CMD         ["google.com"]
-ENTRYPOINT  ["ping" ,"-c" , "5"]
+ENTRYPOINT  ["echo"]
